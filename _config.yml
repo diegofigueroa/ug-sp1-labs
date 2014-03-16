@@ -1,0 +1,6 @@
+name: Laboratorios
+pygments: true
+timezone: America/Guatemala
+relative_permalinks: false
+baseurl: /ug-sp1-labs
+permalink: none

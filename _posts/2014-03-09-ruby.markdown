@@ -1,0 +1,202 @@
+---
+layout: post
+title:  "Laboratorio #1"
+subtitle:  "Ruby 101"
+date:   2014-01-16 21:28:27
+categories: labs
+published: true
+due_date: 2014-01-22
+excerpt: Introducción a Ruby.
+tags: ruby intro
+---
+
+## Objetivos
+
+Esta práctica es para familizarizarse con Ruby, el lenguaje con el que trabajarán el resto del curso.  
+Los objetivos para este laboratorio son:
+
+- Que tomen práctica programando en Ruby.
+- Apliquen los temas vistos en clase sobre Ruby.
+
+---
+
+## Descripción
+
+Debe completar los ejercicios listados a continuación.
+Usted ya sabe programar, solo necesita estudiar la sintaxis del lenguaje nuevo y realizar algunos ejercicios para adaptarse.  
+Contará con el apoyo de sus auxiliares, y por supuesto, Google.
+
+---
+## Ambiente de trabajo
+
+Necesita una instalación de Ruby para poder completar este laboratorio, la recomendación del chef es instalar Ruby utilizando [RVM](http://rvm.io)
+Puede trabajar en el sistema operativo de su elección, pero le recomendamos utilizar alguna distribución de Linux, o Mac OS en su defecto.
+
+Si no desea instalar Ruby, puede descargar la máquina virtual de [Ubuntu 12.04](https://www.dropbox.com/s/n3exax2mm81aoi0/ubuntu12.04.ova) 
+preparada por el equipo docente, la cual ya incluye Ruby 2.0 y Rails.
+
+--
+## 1. include RubyModule
+
+Defina un modulo con las siguientes funciones:
+
+**NOTA**: Debe implementar las funciones **a mano**, no puede utilizar un método ya existente que resuelva el problema especifico.
+
+a) `boolean palindromo?(string s)`: Función que determina si un string conteniendo una palabra o frase es un palindromo, devolviendo un booleano. 
+Debe ingnorar todo lo que no sea una letra, por ejemplo: "A man, a plan, a canal -- Panama" es un palíndromo. 
+Como recomendación considere el uso de expresiones regulares. Puede ayudarse en este [enlace](http://rubular.com)
+
+b) `Hash cuenta_palabras(string s)`: Función que recibe un string con una frase como argumento, y devuelve un Hash, en donde las llaves son las palabras 
+de la frase, y el valor es la cantidad de veces que dicha palabra aparece en la frase.
+
+c) `void hanoi(int numero_discos, int t_origen, int t_destino, int t_alterna)`: Procedimiento que imprime los pasos para resolver el juego Torres de Hanoi.
+
+d) `Array sort(Array a, boolean asc)`: Función que recibe un arreglo y devuelve una **copia** del arreglo ordenado, ascendente o descendentemente, según se indique.
+
+e) `int char_count(string s, char c)`: Función que devuelve la cantidad de ocurrencias de un caracter c en un string s.
+
+f) `int atoi(string s)`: Función que recibe un string representando un entero con signo (en base 10) como argumento y devuelve ese numero en un entero.
+
+## 2. Basic OOP
+
+a) Defina una clase `Dessert` con `getters` y `setters` para los atributos `name`, `size` y `calories`.
+Defina metodos de instancia `healthy?`, que devuelve `true` si un postre tiene menos de 200 calorias, y `delicious?`, que devuelve `true` para todos los postres.
+
+b) Defina una clase `JellyBean` que herede de `Dessert`, y agrege un `getter` y `setter` para `flavor`. 
+Modique `delicious?` para que devuelva `false` si el valor de `flavor` es "black licorice" (pero `delicious?` aun debe devolver `true` para el resto de sabores y para todos los postres que no sean `JellyBean`).
+
+c) Agregue un método de clase `count` a `Dessert`, el cual lleve la cuenta de todos los postres que se hayan instanciado.
+
+Aquí tiene algo de codigo base, para que no tenga que iniciar desde cero (puede agregar métodos adicionales):
+
+{% highlight ruby %}
+class Dessert
+    def initialize(name, calories)
+      # YOUR CODE HERE
+    end
+    
+    def healthy?
+      # YOUR CODE HERE
+    end
+    
+    def delicious?
+      # YOUR CODE HERE
+    end
+    
+    def to_s
+      # YOUR CODE HERE
+    end
+end
+
+class JellyBean < Dessert
+    def initialize(name, calories, flavor)
+      # YOUR CODE HERE
+    end
+end
+{% endhighlight %}
+
+## 3. Modules strikes back!
+
+Examine el siguiente código:
+
+{% highlight ruby %}
+module Action
+  def jump
+    @distance = rand(4) + 2
+    puts "I jumped forward #{@distance} feet!"
+  end
+end
+
+class Rabbit
+  include Action
+  
+  attr_reader :name
+  
+  def initialize(name)
+    @name = name
+  end
+end
+
+class Cricket
+  
+  attr_reader :name
+  
+  def initialize(name)
+    @name = name
+  end
+end
+
+peter = Rabbit.new("Peter")
+jiminy = Cricket.new("Jiminy")
+
+peter.jump
+jiminy.jump
+
+{% endhighlight %}
+
+Agregue lo necesario de forma que ambas clases tengan un método `run`, el cual hace correr al *objeto* 10 metros. Dependiendo de la `velocidad` del *objeto*, 
+la ejecución del método debe tomar más o menos tiempo en completarse. Al terminar el método debe imprimir un mensaje indicando la distancia recorrida, y el 
+tiempo (en segundos) que tardó.
+
+Agregue a la clase `Cricket` un método llamado `chirp`, el cual imprime el mensaje "Chirp... chirp!!" un número aleatorio de veces, no menor de 10, y no mayor de 100.
+
+## 4. Virtualizing computers
+
+Considere la siguiente sección de código:
+
+{% highlight ruby %}
+class Computer
+    @@users = {}
+    
+    def initialize username, password
+        @username = username
+        @password = password
+        
+        @files = {}
+    end
+end
+{% endhighlight %}
+
+
+Agregue un método `create`, el cual *crea un nuevo archivo* en la computadora, el archivo debe llevar un **nombre**, y una **fecha de creación** (la hora actual).
+Este método debe **insertar** el archivo creado a la lista de *archivos* de la computadora, esta lista es un `Hash`, en donde la llave es el nombre del archivo,
+y el valor es la hora de creación. Debe recibir el nombre del archivo como argumento. Este método imprimir un error, si se intenta sobre escribir un archivo.
+
+Además, agregue un método `ls`, el cual imprime en pantalla una lista con los archivos dentro de la computadora, ordenados alfabéticamente.
+Debe imprimir cada archivo en una línea diferente, con el siguiente formato `test.rb created at 09/01/2014 10:00 AM`. 
+Este método debe poder recibir un hash opcional, el cual puede incluir como llave 'sort', y como valor 'asc' o 'desc', y cambiar el orden apropiadamente.
+
+Por último, agregue un método `rm`, el cual recibe como argumento el nombre de un archivo, y lo elimina de la lista. 
+Debe imprimir un error si se intenta eliminar un archivo no existente.
+
+## Ejecutando su programa
+
+Ruby incluye un intérprete interactivo, conocido comúnmente como `irb`. Este intérprete le permite introducir instrucciones al intérprete de forma interactiva.
+
+{% highlight console %}
+$ irb
+2.0.0p247 :001 > puts 'hello world'
+hello world
+ => nil 
+2.0.0p247 :002 >
+{% endhighlight %}
+
+Adicionalmente, puede ejecutar un programa de Ruby de la siguiente forma:
+
+{% highlight console %}
+$ ruby mi_programa.rb
+{% endhighlight %}
+
+Ó desde irb:
+
+{% highlight console %}
+$ irb
+2.0.0p247 :001 > require './mi_programa'
+{% endhighlight %}
+
+--
+## Entrega
+
+La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 26 de marzo 2014**, debe enviar un archivo zip conteniendo todos sus programas.
+
+--
