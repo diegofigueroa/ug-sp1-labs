@@ -197,6 +197,7 @@ $ irb
 --
 ## Entrega
 
-La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 26 de marzo 2014**, debe enviar un archivo zip conteniendo todos sus programas.
+La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 26 de marzo 2014**, debe enviar un link a un repositorio de github
+conteniendo todos sus programas.
 
 --
