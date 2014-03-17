@@ -4,7 +4,7 @@ title:  "Laboratorio #4"
 subtitle:  "Active Record III"
 date:   2014-03-18 21:28:27
 categories: labs
-published: true
+published: false
 due_date: 2014-04-9
 excerpt: Asociaciones de Active Record.
 tags: ror associations active record
