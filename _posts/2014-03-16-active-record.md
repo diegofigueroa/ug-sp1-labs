@@ -4,7 +4,7 @@ title:  "Laboratorio #2"
 subtitle:  "Active Record"
 date:   2014-02-16 21:28:27
 categories: labs
-published: false
+published: true
 due_date: 2014-03-26
 excerpt: Introducción a Rails y Active Record.
 tags: ror intro active record
