@@ -4,7 +4,7 @@ title:  "Laboratorio #3"
 subtitle:  "Active Record II"
 date:   2014-03-17 21:28:27
 categories: labs
-published: false
+published: true
 due_date: 2014-04-2
 excerpt: Validaciones de Active Record.
 tags: ror validations active record
