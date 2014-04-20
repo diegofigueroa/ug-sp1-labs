@@ -140,6 +140,6 @@ Para salir de la consola escriba *exit*.
 --
 ## Entrega
 
-La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 31 de Abril 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
+La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 30 de Abril 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
 
 --
