@@ -5,7 +5,7 @@ subtitle:  "Serializadores"
 date:   2014-04-20 10:28:27
 categories: labs
 published: true
-due_date: 2014-05-21
+due_date: 2014-05-14
 excerpt: Active Model Serializers
 tags: ror active model serializers
 ---
@@ -257,6 +257,6 @@ Puede hacer requests hacia su aplicación a través del navegador, o utilizando 
 --
 ## Entrega
 
-La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 21 de Mayo 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
+La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 14 de Mayo 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
 
 --
