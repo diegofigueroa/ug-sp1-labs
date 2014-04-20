@@ -4,7 +4,7 @@ title:  "Laboratorio #3"
 subtitle:  "Active Record II"
 date:   2014-03-17 21:28:27
 categories: labs
-published: false
+published: true
 due_date: 2014-04-2
 excerpt: Validaciones de Active Record.
 tags: ror validations active record
@@ -155,6 +155,6 @@ Para salir de la consola escriba *exit*.
 --
 ## Entrega
 
-La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 2 de abril 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
+La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 2 de Abril 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
 
 --

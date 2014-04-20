@@ -4,8 +4,8 @@ title:  "Laboratorio #4"
 subtitle:  "Active Record III"
 date:   2014-03-18 21:28:27
 categories: labs
-published: false
-due_date: 2014-04-9
+published: true
+due_date: 2014-04-30
 excerpt: Asociaciones de Active Record.
 tags: ror associations active record
 ---
@@ -140,6 +140,6 @@ Para salir de la consola escriba *exit*.
 --
 ## Entrega
 
-La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 9 de abril 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
+La entrega se realizará a través del `GES` antes de las **23:55:00** del día **Miércoles 31 de Abril 2014**, debe enviar un link a un repositorio de github de su proyecto con los cambios necesarios.
 
 --
